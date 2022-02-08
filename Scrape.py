@@ -3,12 +3,15 @@ from bs4 import BeautifulSoup
 
 def Scrape():
     browser = webdriver.Firefox()
-    targeturl = "https://www.deliveringforscotland.gov.uk/at-work/nlw-nmw/"
+    targeturl = "https://www.gov.uk/national-minimum-wage-rates"
     browser.get(targeturl)
 
     soup = BeautifulSoup(browser.page_source, features='html.parser')
 
-    print(soup.prettify())
+    rates = soup.find_all('tr')
+
+    #print(soup.prettify())
+    print(rates)
 
     browser.close()
 
