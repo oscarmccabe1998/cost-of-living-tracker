@@ -10,7 +10,7 @@ def Scrape():
 
     rates = soup.find_all('tr')
 
-    #print(soup.prettify())
+    
     print(rates)
 
     browser.close()
