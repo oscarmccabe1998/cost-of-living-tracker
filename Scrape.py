@@ -11,12 +11,14 @@ def Scrape():
 
     soup = BeautifulSoup(browser.page_source, features='html.parser')
 
+    browser.close()
+
     rates = soup.find_all('tr')
 
     
     print(rates)
 
-    browser.close()
+    
 
 if __name__ == "__main__":
     Scrape()
