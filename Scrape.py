@@ -1,8 +1,11 @@
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 from bs4 import BeautifulSoup
 
 def Scrape():
-    browser = webdriver.Firefox()
+    options = Options()
+    options.headless = True
+    browser = webdriver.Firefox(options=options)
     targeturl = "https://www.gov.uk/national-minimum-wage-rates"
     browser.get(targeturl)
 
