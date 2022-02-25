@@ -25,5 +25,5 @@ def Scrape():
 if __name__ == "__main__":
     #Scrape()
     scheduler = BlockingScheduler()
-    scheduler.add_job(Scrape, 'interval', minutes = 1)
+    scheduler.add_job(Scrape, 'interval', minutes = 1) #set to 1 minute for testing 
     scheduler.start()
