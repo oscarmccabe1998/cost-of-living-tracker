@@ -7,6 +7,7 @@ RUN apt-get install -y python3-pip
 
 RUN pip3 install selenium
 RUN pip3 install beautifulsoup4
+RUN pip3 install APScheduler
 
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
 RUN tar -xvzf geckodriver-v0.30.0-linux64.tar.gz

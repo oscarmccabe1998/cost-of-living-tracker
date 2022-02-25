@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from bs4 import BeautifulSoup
+from apscheduler.schedulers.blocking import BlockingScheduler
 
 def Scrape():
     options = Options()
@@ -18,7 +19,11 @@ def Scrape():
     
     print(rates)
 
+
     
 
 if __name__ == "__main__":
-    Scrape()
+    #Scrape()
+    scheduler = BlockingScheduler()
+    scheduler.add_job(Scrape, 'interval', minutes = 1)
+    scheduler.start()

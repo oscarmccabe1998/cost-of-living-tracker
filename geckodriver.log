@@ -1,0 +1,49 @@
+1645802513908	geckodriver	INFO	Listening on 127.0.0.1:35531
+1645802514419	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "51533" "-no-remote" "-profile" "/tmp/rust_mozprofile20idhg"
+*** You are running in headless mode.
+1645802514627	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile20idhg/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51533/devtools/browser/86c62e1f-f202-4f71-acc9-103a3c0d63e3
+1645802515250	Marionette	INFO	Listening on port 46835
+1645802515338	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1645802515686	Marionette	INFO	Stopped listening on port 46835
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1645802573895	geckodriver	INFO	Listening on 127.0.0.1:57499
+1645802574402	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "58651" "-no-remote" "-profile" "/tmp/rust_mozprofiley7UbNH"
+*** You are running in headless mode.
+1645802574609	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiley7UbNH/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58651/devtools/browser/80b8ecd1-daa9-44f8-acbd-4328a70c6f78
+1645802575237	Marionette	INFO	Listening on port 38715
+1645802575344	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1645802575686	Marionette	INFO	Stopped listening on port 38715
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1645802633894	geckodriver	INFO	Listening on 127.0.0.1:47139
+1645802634401	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "--remote-debugging-port" "57953" "-no-remote" "-profile" "/tmp/rust_mozprofileL4WWu9"
+*** You are running in headless mode.
+1645802634611	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileL4WWu9/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57953/devtools/browser/fb93ff5a-ffef-4425-9692-e7650f70c8fb
+1645802635228	Marionette	INFO	Listening on port 39527
+1645802635325	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1645802635654	Marionette	INFO	Stopped listening on port 39527
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
