@@ -15,30 +15,31 @@ def Scrape():
     browser.close()
 
     rows = soup.find_all('tr')
+    payrates = soup.find_all('td')
+
+    headings = []
+    tablerow = []
+    contents = []
 
     rates = {}
+    for x in range(len(payrates)):
 
-    headings = soup.find_all('th')
+        headings.append(soup.find_all('td')[x].contents)
 
-    for row in rows:
-        row_header = row.th.get_text()
-        row_cell = row.td.get_text()
-        rates[row_header] = row_cell
+    for row in range(len(rows)):
+        tablerow.append(soup.find_all('th')[row].contents)
+        contents.append(soup.find_all('td')[row].contents)
 
-    #for row in rows:
-    #    cols = row.find_all('td')
-    #    cols = [ele.text.strip() for ele in cols]
-    #    rates.append([ele for ele in cols if ele])
     
-    #print(rows)
-    print(rates)
-    #print(headings)
+    print(tablerow)
+    print(headings)
+    print(len(soup.find_all('table')))
 
 
     
 
 if __name__ == "__main__":
-    Scrape()
-   # scheduler = BlockingScheduler()
-   # scheduler.add_job(Scrape, 'interval', minutes = 1) #set to 1 minute for testing 
-   # scheduler.start()
+   # Scrape()
+    scheduler = BlockingScheduler()
+    scheduler.add_job(Scrape, 'interval', minutes = 1) #set to 1 minute for testing 
+    scheduler.start()
