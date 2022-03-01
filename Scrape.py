@@ -35,7 +35,14 @@ def Scrape():
     print(headings)
     print(len(soup.find_all('table')))
 
+    class minWage:
+        def __init__(self, years, ageBracket, hourlyRate):
+            self.years = years
+            self.ageBracket = ageBracket
+            self.hourlyRate = hourlyRate
 
+        def printclass(self):
+            print("data inside the class is " + self.years + self.ageBracket + self.hourlyRate)
     
 
 if __name__ == "__main__":
