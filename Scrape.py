@@ -21,7 +21,7 @@ def Scrape():
     tablerow = []
     contents = []
 
-    rates = {}
+    
     for x in range(len(payrates)):
 
         headings.append(soup.find_all('td')[x].contents)
