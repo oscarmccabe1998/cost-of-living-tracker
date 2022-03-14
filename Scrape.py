@@ -34,19 +34,21 @@ def Scrape():
     print(tablerow)
     print(headings)
     print(len(soup.find_all('table')))
+    print(len(soup.find_all('tr')))
+    #print(soup.find_all('tr'))
 
-    class minWage:
-        def __init__(self, years, ageBracket, hourlyRate):
-            self.years = years
-            self.ageBracket = ageBracket
-            self.hourlyRate = hourlyRate
+    #class minWage:
+    #    def __init__(self, years, ageBracket, hourlyRate):
+    #        self.years = years
+    #        self.ageBracket = ageBracket
+    #        self.hourlyRate = hourlyRate
 
-        def printclass(self):
-            print("data inside the class is " + self.years + self.ageBracket + self.hourlyRate)
+    #    def printclass(self):
+    #        print("data inside the class is " + self.years + self.ageBracket + self.hourlyRate)
     
 
 if __name__ == "__main__":
-   # Scrape()
+    Scrape()
     scheduler = BlockingScheduler()
     scheduler.add_job(Scrape, 'interval', minutes = 1) #set to 1 minute for testing 
     scheduler.start()
