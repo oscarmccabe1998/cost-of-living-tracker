@@ -14,38 +14,49 @@ def Scrape():
 
     browser.close()
 
-    rows = soup.find_all('tr')
+    
     payrates = soup.find_all('td')
-
     headings = []
     tablerow = []
     contents = []
 
-    
+    class minWage:
+        def __init__(self):
+            self.years = []
+            self.ageBracket = []
+            self.hourlyRate = []
+
+        def add_data(self, years):
+            rows = soup.find_all('th', {"scope":"row"})
+            for row in range(len(rows)):
+                self.years.append(soup.find_all('th', {"scope":"row"}))
+            print(str(len(self.years)))
+            
+
+        #def printdata(self, years):
+        #    print(str(len(self.years))) #+ self.ageBracket + self.hourlyRate)
+
+    A = minWage()
+    #A.printdata()   
+    print(A.years)
+            
+
     for x in range(len(payrates)):
 
         headings.append(soup.find_all('td')[x].contents)
 
-    for row in range(len(rows)):
-        tablerow.append(soup.find_all('th')[row].contents)
-        contents.append(soup.find_all('td')[row].contents)
+    #for row in range(len(rows)):
+    #    tablerow.append(soup.find_all('th')[row].contents)
+    #    contents.append(soup.find_all('td')[row].contents)
 
     
-    print(tablerow)
-    print(headings)
-    print(len(soup.find_all('table')))
-    print(len(soup.find_all('tr')))
+    #print(rows)
+    #print(headings)
+    #print(len(soup.find_all('table')))
+    #print(len(soup.find_all('tr')))
     #print(soup.find_all('tr'))
 
-    #class minWage:
-    #    def __init__(self, years, ageBracket, hourlyRate):
-    #        self.years = years
-    #        self.ageBracket = ageBracket
-    #        self.hourlyRate = hourlyRate
 
-    #    def printclass(self):
-    #        print("data inside the class is " + self.years + self.ageBracket + self.hourlyRate)
-    
 
 if __name__ == "__main__":
     Scrape()
